@@ -29,7 +29,7 @@ public class character : MonoBehaviour
         Debug.Log(transform.position);
         // Get the mouse delta. This is not in the range -1...1
         float h = horizontalSpeed * Input.GetAxis("Mouse X");
-        float v = verticalSpeed * Input.GetAxis("Mouse Y");
+        float v = verticalSpeed * Input.GetAxis("Mouse Y");                              
 
         transform.Rotate(v, h, 0);
     }
