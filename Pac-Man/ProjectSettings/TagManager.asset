@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Point
+  - Teleport_A
+  - Teleport_B
+  - SuperPoint
+  - Enemy
   layers:
   - Default
   - TransparentFX

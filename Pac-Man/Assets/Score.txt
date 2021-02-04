@@ -1,0 +1,12 @@
+rykoszet
+4
+wodnik
+5
+koniec
+10
+ruryk
+4
+abc
+16
+test
+7

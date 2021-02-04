@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class CharacterMovement: MonoBehaviour
 {
-    private Rigidbody _rigidbody;
     private CharacterController _characterController;
-
     void Start()
     {
-        //_rigidbody = GetComponent<Rigidbody>();
         _characterController = GetComponent<CharacterController>();
     }
 
@@ -18,6 +15,7 @@ public class CharacterMovement: MonoBehaviour
 
     void Update()
     {
+        //movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -29,5 +27,18 @@ public class CharacterMovement: MonoBehaviour
         float h = horizontalSpeed * Input.GetAxis("Mouse X");
         transform.Rotate(0, h, 0);
     }
-    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Teleport_A"))
+        {
+            Vector3 position = transform.position;
+            transform.position= new Vector3(-110f, position.y,position.z);
+        }
+        if (other.CompareTag("Teleport_B"))
+        {
+            Vector3 position = transform.position;
+            transform.position = new Vector3(110f, position.y, position.z);
+        }
+    }
+
 }
