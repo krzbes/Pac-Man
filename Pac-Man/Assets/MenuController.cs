@@ -17,9 +17,11 @@ public class MenuController : MonoBehaviour
         mainMenu.SetActive(false);
         topScores.SetActive(true);
         Save save = new Save();
-        for(int i = 0; i < 10; i++)
+        int tmp;
+        for (int i = 0; i < 10; i++)
         {
-            scoreTable[i].text = save.GetScore(i);
+             tmp = i+1;
+            scoreTable[i].text = tmp+". " + save.GetScore(i);
         }
     }
     public void BackToMenu()
